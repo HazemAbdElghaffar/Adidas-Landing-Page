@@ -1,0 +1,216 @@
+/*Start Global Rules*/
+:root {
+    --maincolor: white;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    background: linear-gradient(#111, #222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: red;
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(40% at right 70%);
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+ul {
+    list-style: none;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Meduim */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/*End Global Rules*/
+/* Start Header */
+/* .parent {
+    height: 100vh;
+    background: linear-gradient(#111, #222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .parent::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: red;
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(40% at right 70%);
+} */
+
+.container {
+    height: 80%;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    overflow: hidden;
+}
+
+.container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.container nav a {
+    text-decoration: none;
+    color: white;
+}
+.container nav > a {
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.container nav ul {
+    display: flex;
+}
+.container nav ul li a {
+    padding: 20px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    font-size: 18px;
+    font-weight: 500;
+}
+.container nav ul li a:hover {
+    color: #a80202;
+}
+
+.container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 95%;
+    margin: auto;
+}
+.container .content .text {
+    color: white;
+    width: 40%;
+}
+.container .content .text h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.container .content .text p {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10px 0;
+}
+
+.container .content .image {
+    width: 40%;
+}
+
+.container .content .image img {
+    width: 400px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container .content .image img {
+        width: 330px;
+    }
+    .container .content .text h2{
+        font-size: 40px;
+    }
+    .container .content .text p {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container .content .image img {
+        width: 280px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* .container {
+        overflow: visible;
+    } */
+    .content, .container nav {
+        flex-direction: column;
+        justify-content: center !important;
+    }
+    .container .content .text, 
+    .container .content .image {
+        width: 80%;
+    }
+    .container nav > a {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .content, .container nav ul li a {
+        font-size: 16px;
+        padding: 15px;
+    }
+    body::after {
+        clip-path: circle(50% at bottom);
+    }
+    .container .content .image img {
+        width: 200px;
+    }
+    .container .content .text h2 {
+        font-size: 25px;
+    }
+    .container .content .text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 350px) {
+    .container .content .image img {
+        display: none;
+    }
+    .content, .container nav ul li a {
+        padding: 8px;
+    }
+}
+/* End Header */
